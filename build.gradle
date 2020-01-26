@@ -1,10 +1,12 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'org.mparszewski'
 version '1.0-SNAPSHOT'
 
+mainClassName = 'mparszewski.Main'
 sourceCompatibility = 1.8
 
 repositories {
@@ -14,6 +16,5 @@ repositories {
 dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.10'
     annotationProcessor 'org.projectlombok:lombok:1.18.10'
-    compile group: 'ml.dmlc', name: 'xgboost-jvm', version: '0.72', ext: 'pom'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

@@ -4,7 +4,6 @@ import lombok.*;
 
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Yeast {
@@ -64,4 +63,18 @@ public class Yeast {
      * Kanehisa referenced above for more details.
      */
     private String classDistribution;
+
+    @Override
+    public String toString() {
+        return this.sequenceName + "," +
+                this.mcg + "," +
+                this.gvh + "," +
+                this.alm + "," +
+                this.mit + "," +
+                this.erl + "," +
+                this.pox + "," +
+                this.vac + "," +
+                this.nuc + "," +
+                this.classDistribution;
+    }
 }
